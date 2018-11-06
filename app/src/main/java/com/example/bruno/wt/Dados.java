@@ -4,12 +4,12 @@ public class Dados {
 
     private double mSpeedForce;
     private double mTemperature;
-//    private String mLocation;
+    private String mLocation;
 
-    public Dados(double speedForce, double temperature) {
+    public Dados(double speedForce, double temperature, String location) {
         mSpeedForce = speedForce;
         mTemperature = temperature;
-//        mLocation = location;
+        mLocation = location;
     }
 
     public double getSpeedForce() {
@@ -20,9 +20,13 @@ public class Dados {
         return mTemperature;
     }
 
-//    public String getLocation() {
-//        return mLocation;
-//    }
+    public String getLocation() {
+        return mLocation;
+    }
+
+    public void setLocation(String location) {
+        mLocation = location;
+    }
 
 
 }

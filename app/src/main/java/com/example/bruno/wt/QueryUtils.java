@@ -1,5 +1,7 @@
 package com.example.bruno.wt;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -13,6 +15,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 public class QueryUtils {
 
@@ -50,11 +53,18 @@ public class QueryUtils {
 
         try {
             JSONObject baseResponse = new JSONObject(dadosJson);
+            double latitude = baseResponse.getDouble("latitude");
+            double longitude = baseResponse.getDouble("longitude");
             JSONObject currently = baseResponse.getJSONObject("currently");
             double temp = currently.getDouble("temperature");
             double windSpeed = currently.getDouble("windSpeed");
 
-            Dados jsonDados = new Dados(windSpeed, temp);
+
+            String location = "Lat: " + latitude + "Long:" + longitude + "";
+
+
+
+            Dados jsonDados = new Dados(windSpeed, temp, location);
 
             return jsonDados;
         } catch (JSONException e) {
