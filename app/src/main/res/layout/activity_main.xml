@@ -8,20 +8,28 @@
     tools:layout_editor_absoluteY="81dp">
 
 
+    <Button
+        android:id="@+id/ativar_localizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="ATIVAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/location_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="115dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginRight="115dp"
-        android:layout_marginStart="116dp"
         android:layout_marginTop="16dp"
         android:fontFamily="cursive"
         android:text="Location"
         android:textColor="#1a237e"
         android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,18 +37,14 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="137dp"
-        android:layout_marginLeft="137dp"
-        android:layout_marginRight="137dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="43dp"
         android:fontFamily="cursive"
         android:text="Wind Force"
         android:textColor="#455a64"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/wind_force_text_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/location_text_view" />
 
@@ -48,18 +52,13 @@
         android:id="@+id/wind_force_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginLeft="144dp"
-        android:layout_marginRight="145dp"
-        android:layout_marginStart="144dp"
         android:fontFamily="cursive"
-        android:text="20"
+        android:text="--"
         android:textAlignment="center"
         android:textColor="#455a64"
         android:textSize="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -67,11 +66,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="135dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginRight="135dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="13dp"
         android:fontFamily="cursive"
         android:text="Temperature"
         android:textColor="#ffb300"
@@ -79,6 +74,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/temperature_force_text_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wind_force_text_view" />
 
@@ -86,19 +82,13 @@
         android:id="@+id/temperature_force_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="101dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginLeft="144dp"
-        android:layout_marginRight="144dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="3dp"
         android:fontFamily="cursive"
-        android:text="60"
+        android:text="--"
         android:textAlignment="center"
         android:textColor="#ffb300"
         android:textSize="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
