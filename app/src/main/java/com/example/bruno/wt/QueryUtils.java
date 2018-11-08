@@ -63,8 +63,7 @@ public class QueryUtils {
             String location = "Lat: " + latitude + "Long:" + longitude + "";
 
 
-
-            Dados jsonDados = new Dados(windSpeed, temp, location);
+            Dados jsonDados = new Dados(windSpeed, temp, location, latitude, longitude);
 
             return jsonDados;
         } catch (JSONException e) {
