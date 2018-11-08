@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#b4a446"></solid>
+            <size android:width="70dp" android:height="70dp"/>
+
+
+        </shape>
+    </item>
+    <item android:drawable="@drawable/gpslocation" android:gravity="center" android:width="40dp"
+        android:height="40dp">
+    </item>
+
+
+    <item>
+        <shape android:shape="oval">
+            <stroke android:color="#827717" android:width="3dp"/>
+            <size android:width="70dp" android:height="70dp"/>
+
+        </shape>
+    </item>
+
+</layer-list>
