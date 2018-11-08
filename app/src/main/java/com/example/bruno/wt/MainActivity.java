@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -98,6 +99,17 @@ public class MainActivity extends AppCompatActivity {
         locationTextView = (TextView) findViewById(R.id.location_text_view);
 
         Button ativarLocalizacao = (Button) findViewById(R.id.ativar_localizacao);
+        Button instructionsButton = (Button) findViewById(R.id.instructions_button);
+
+
+        instructionsButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, InstructionsActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         FusedLocationProviderClient mFusedLocationClient = LocationServices
