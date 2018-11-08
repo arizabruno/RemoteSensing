@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private double latitude, longitude;
 
-    private String localizacaoFinal = "teste";
+    private String localizacaoFinal = "Tampa, FL";
 
 
     String darkSkyUrl;
@@ -89,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         final Geocoder geocoder = new Geocoder(this);
@@ -224,14 +228,14 @@ public class MainActivity extends AppCompatActivity {
 
             String locationString = dados.getLocation();
 
-            String locationLatLon = dados.getLatitude() + ", " + dados.getLongitude();
+            String locationLatLon = dados.getLatitude() + "  ,  " + dados.getLongitude();
 
             String temperature = "" + fTemp + " °F";
             String windSpeed = "" + mphSpeed + " mph";
 
             temperatureTextView.setText(temperature);
             windForceTextView.setText(windSpeed);
-            locationTextView.setText(locationLatLon);
+            locationTextView.setText(locationString);
 
         }
 
