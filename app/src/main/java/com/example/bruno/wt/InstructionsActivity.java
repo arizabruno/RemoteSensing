@@ -19,7 +19,7 @@ public class InstructionsActivity extends AppCompatActivity {
         actionBar.hide();
 
         instructions = findViewById(R.id.instructions);
-        instructions.fromAsset("cad4.pdf").load();
+        instructions.fromAsset("educationmaterials.pdf").load();
 
     }
 }
